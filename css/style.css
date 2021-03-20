@@ -19,7 +19,7 @@ body
 {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to right, #293250cb,#5bf7759a),url('https://ibb.co/RBVmZ9d');
+    background: linear-gradient(to right, #293250cb,#5bf7759a),url('./images/skill.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
