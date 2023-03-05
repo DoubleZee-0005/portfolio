@@ -3,6 +3,8 @@
     --blue: #293250;
     --green: #5bf775;
     --yellow: #ffe02f;
+    --pink: #d03161;
+    --peach: #ee8080;
 }
 
 *
@@ -123,7 +125,7 @@ body
     top: 0px;
     height: 100vh;    
     z-index: 99;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -131,7 +133,7 @@ body
 {
     display: inline-block;
     text-decoration: none;    
-    height: 98vh;    
+    height: 100vh;    
     text-align: center;  
     line-height: 68vh;  
 }
@@ -182,9 +184,22 @@ body
 }
 
 
-.menu-items li:nth-child(3)
+.menu-items li:nth-child(4)
 {
     background-color: var(--green);
+}
+.menu-items li:nth-child(4) a
+{
+    color: var(--blue);
+}
+.menu-items li:nth-child(4) a:hover
+{
+    transform: rotate(360deg); 
+}
+
+.menu-items li:nth-child(3)
+{
+    background-color: white;
 }
 .menu-items li:nth-child(3) a
 {
@@ -454,8 +469,7 @@ body
 }
 
 .custom-btn
-{    
-    background-color: var(--green);
+{        
     color: var(--blue);
     font-size: 20px;
     border: none;
@@ -463,9 +477,25 @@ body
     transition: all ease-in-out .3s;
 }
 
-.custom-btn:hover
+.custom-btn-1{
+
+    background-color: var(--green);
+}
+
+.custom-btn-1:hover
 {
     background-color: var(--yellow);
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.custom-btn-2
+{    
+    background-color: var(--yellow);
+}
+
+.custom-btn-2:hover{
+    background-color: var(--green);
     color: var(--blue);
     text-decoration: none;
 }
@@ -590,8 +620,8 @@ body
 
 .exprience-content div
 {
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .card
@@ -715,4 +745,20 @@ body
     padding: 5px;
     background: var(--green);
     color: var(--blue);
+}
+
+.technologies-list{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.technologies-list > img{
+    width: 50px;
+    margin: 5px 10px;
+}
+
+.technology-text{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 26px;
 }
