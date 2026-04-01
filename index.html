@@ -1,18 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Double-Zee | Welcome</title>
-    <link rel="icon" href="images/logo2.png">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Muhammad Zain Nadeem | Full Stack Developer</title>
+    <meta name="description"
+        content="Full Stack Developer specializing in PHP, Laravel, Vue.js, and modern web technologies. Building scalable, high-performance web applications.">
+    <meta property="og:title" content="Muhammad Zain Nadeem | Full Stack Developer">
+    <meta property="og:description"
+        content="Software wizard & tech enthusiast with expertise in PHP, JavaScript, and Vue.js.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#ffe02f',
+                        navy: '#293250',
+                        'accent-dark': '#e6c800',
+                    },
+                    fontFamily: {
+                        sans: ['"Century Gothic"', 'CenturyGothic', 'AppleGothic', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        .glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(41, 50, 80, 0.08);
+        }
+
+        .glass-dark {
+            background: rgba(41, 50, 80, 0.85);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-accent {
+            background: rgba(255, 224, 47, 0.12);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 224, 47, 0.25);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 40%, #fffbe6 70%, #ffffff 100%);
+        }
+
+        .section-gradient {
+            background: linear-gradient(180deg, #f8faff 0%, #ffffff 50%, #fffef5 100%);
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.18;
+            pointer-events: none;
+            animation: blobFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes blobFloat {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(30px, -20px) scale(1.08);
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: #ffe02f;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0
+            }
+        }
+
+        .project-card {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(255, 224, 47, 0.18), 0 8px 24px rgba(41, 50, 80, 0.10);
+        }
+
+        .skill-badge {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 224, 47, 0.25);
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #ffe02f, #293250);
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 20px;
+            }
+        }
+
+        .glow-dot {
+            width: 16px;
+            height: 16px;
+            background: #ffe02f;
+            border-radius: 50%;
+            border: 3px solid #293250;
+            box-shadow: 0 0 15px rgba(255, 224, 47, 0.5);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #293250;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffe02f;
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(41, 50, 80, 0.06);
+            color: #293250;
+        }
+
+        #navbar {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #navbar.navbar-floating {
+            width: 95%;
+            max-width: 1024px;
+            border-radius: 1.25rem;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(41, 50, 80, 0.08);
+        }
+
+        #navbar.navbar-transparent {
+            width: 100%;
+            max-width: 100%;
+            background: transparent;
+            border-color: transparent;
+            box-shadow: none;
+            backdrop-filter: blur(0);
+            -webkit-backdrop-filter: blur(0);
+        }
+    </style>
 </head>
 
+<<<<<<< Updated upstream
 <body>
     <header>
         <div class="header-background" style="background: linear-gradient(to right, #293250cb,#5bf7759a),url('images/skill.png');background-size: cover;
@@ -71,10 +269,42 @@
                                 style="color: var(--yellow);"></span></h4>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
+=======
+<body class="font-sans text-navy bg-white overflow-x-hidden">
 
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 z-50 navbar-transparent transition-all duration-500">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-tight">
+                <span class="text-navy">Zain</span><span class="text-accent-dark">.</span><span
+                    class="text-accent bg-navy px-2 py-0.5 rounded-lg ml-1 text-sm">dev</span>
+            </a>
+            <div class="hidden md:flex items-center gap-2 text-sm font-medium text-navy/80">
+                <a href="#about" class="nav-link hover:text-navy transition-colors">About</a>
+                <a href="#experience" class="nav-link hover:text-navy transition-colors">Experience</a>
+                <a href="#skills" class="nav-link hover:text-navy transition-colors">Skills</a>
+                <a href="#projects" class="nav-link hover:text-navy transition-colors">Projects</a>
+                <a href="#github" class="nav-link hover:text-navy transition-colors">GitHub</a>
+                <a href="#contact"
+                    class="bg-navy text-accent px-5 py-2 rounded-xl hover:bg-accent hover:text-navy transition-all duration-300 font-semibold ml-2 shadow-lg hover:shadow-accent/40">Contact</a>
+>>>>>>> Stashed changes
+            </div>
+            <button id="menuBtn" class="md:hidden text-navy text-2xl" aria-label="Toggle menu"><i
+                    class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobileMenu"
+            class="hidden md:hidden px-6 pb-6 flex flex-col gap-3 text-sm font-medium border-t border-white/20 pt-4 glass rounded-b-2xl shadow-xl">
+            <a href="#about" class="nav-link hover:text-navy py-1">About</a>
+            <a href="#experience" class="nav-link hover:text-navy py-1">Experience</a>
+            <a href="#skills" class="nav-link hover:text-navy py-1">Skills</a>
+            <a href="#projects" class="nav-link hover:text-navy py-1">Projects</a>
+            <a href="#github" class="nav-link hover:text-navy py-1">GitHub</a>
+            <a href="#contact"
+                class="bg-navy text-accent px-5 py-2 rounded-xl text-center hover:bg-accent hover:text-navy transition-all">Contact</a>
+        </div>
+    </nav>
+
+<<<<<<< Updated upstream
     <section style="margin-bottom: 100px;">
         <div class="container">
             <div class="mt-3 d-flex justify-content-center" id="aboutMe">
@@ -177,18 +407,62 @@
                                         effective strategies for working with distributed teams.
                                     </p>
                                 </div>
+=======
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <div class="blob w-96 h-96 bg-accent top-10 -left-20"></div>
+        <div class="blob w-80 h-80 bg-navy/30 bottom-20 right-10" style="animation-delay:-3s"></div>
+        <div class="blob w-64 h-64 bg-accent/50 top-1/2 left-1/2" style="animation-delay:-5s"></div>
+        <div class="max-w-6xl mx-auto px-6 py-32 md:py-40 relative z-10 w-full">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 text-center md:text-left">
+                    <p id="heroTag"
+                        class="text-sm font-semibold tracking-widest uppercase text-accent-dark mb-4 fade-up">Welcome
+                    </p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6 fade-up">
+                        Hi, I'm <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-navy to-accent-dark">Muhammad<br>Zain
+                            Nadeem</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-navy/70 mb-2 fade-up">
+                        <span class="font-semibold text-navy">Full Stack Developer</span> — <span id="typewriter"
+                            class="typing-cursor"></span>
+                    </p>
+                    <p id="heroBio" class="text-base text-navy/60 max-w-lg mb-8 fade-up mx-auto md:mx-0">
+                        Software wizard 🧙‍♂️ crafting scalable, high-performance web applications with PHP, Laravel,
+                        Vue.js & modern JavaScript.
+                    </p>
+                    <div id="heroCTAs" class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start fade-up">
+                        <a id="cvBtn" href="https://doublezee-0005.github.io/cv.pdf" target="_blank"
+                            class="bg-navy text-accent px-8 py-3.5 rounded-xl font-semibold hover:bg-accent hover:text-navy transition-all duration-300 shadow-lg hover:shadow-accent/30 text-center">
+                            <i class="fas fa-download mr-2"></i>Download CV
+                        </a>
+                        <a id="heroLinkedIn" href="https://www.linkedin.com/in/muhammad-zain-nadeem-7bb845207/"
+                            target="_blank"
+                            class="glass border-navy/20 text-navy px-8 py-3.5 rounded-xl font-semibold hover:bg-navy hover:text-accent transition-all duration-300 text-center">
+                            <i class="fab fa-linkedin mr-2"></i>Let's Connect
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 fade-up">
+                    <div
+                        class="w-56 h-56 sm:w-72 sm:h-72 rounded-3xl bg-gradient-to-br from-navy to-accent-dark p-1 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="w-full h-full rounded-3xl bg-white flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-6xl sm:text-7xl mb-2">👨‍💻</div>
+                                <p class="text-sm font-bold text-navy/80 tracking-wide">FULL STACK<br>DEVELOPER</p>
+>>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!--03 Experience-->
-
-            <div class="d-flex justify-content-center" id="skills" style="margin-top:120px">
-                <div class="numbering text-center" style="background-color: var(--blue);color: var(--yellow);">
-                    <h1>03</h1>
+            <div class="flex gap-8 mt-16 justify-center md:justify-start fade-up">
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-navy">5+</p>
+                    <p class="text-xs text-navy/50 uppercase tracking-wider">Years Exp.</p>
                 </div>
+<<<<<<< Updated upstream
             </div>
             <div class="section-heading">
                 <h1 class="text-center mt-4 mb-5" data-aos="zoom-in">🌟 Skills</h1>
@@ -686,11 +960,23 @@
                         <a href="https://www.blackbusinesstraffic.com/" target="_blank" class="project-link">Visit Site
                             →</a>
                     </div>
+=======
+                <div class="w-px bg-navy/15"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-navy">12+</p>
+                    <p class="text-xs text-navy/50 uppercase tracking-wider">Projects</p>
+                </div>
+                <div class="w-px bg-navy/15"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-navy">4</p>
+                    <p class="text-xs text-navy/50 uppercase tracking-wider">Companies</p>
+>>>>>>> Stashed changes
                 </div>
             </div>
         </div>
     </section>
 
+<<<<<<< Updated upstream
     <footer id="footer" style="background-color: var(--yellow);">
         <div class="container">
             <div class="row p-3">
@@ -716,53 +1002,888 @@
                                     style="color: var(--blue); font-size: 30px;"><i class="fab fa-linkedin"></i></a>
                             </li>
                         </ul>
+=======
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section-gradient py-24 relative">
+        <div class="blob w-72 h-72 bg-accent -top-20 right-0"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14 fade-up">
+                <p class="text-sm font-semibold tracking-widest uppercase text-accent-dark mb-2">Get to know me</p>
+                <h2 class="text-3xl sm:text-4xl font-bold">About Me</h2>
+            </div>
+            <div class="glass rounded-3xl p-8 md:p-12 shadow-xl fade-up">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="flex-shrink-0 mx-auto md:mx-0">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-4xl shadow-lg">
+                            🧙‍♂️</div>
+                    </div>
+                    <div>
+                        <p class="text-navy/80 leading-relaxed mb-4">
+                            Software wizard and tech enthusiast with expertise in <strong>PHP, JavaScript, and
+                                Vue.js</strong>. I bring extensive experience in both front-end and back-end
+                            development. Over the years, I've led and contributed to complex web applications, scaling
+                            production systems, integrating third-party services, and ensuring high performance and
+                            reliability.
+                        </p>
+                        <p class="text-navy/80 leading-relaxed mb-4">
+                            With a strong focus on clean, maintainable code and best practices, I've guided teams
+                            through code reviews, mentoring, and collaborative problem-solving. I thrive in both solo
+                            projects and distributed team environments, leveraging <strong>Agile and Scrum</strong>
+                            methodologies to deliver successful outcomes.
+                        </p>
+                        <p class="text-navy/70 leading-relaxed">
+                            Passionate about continuous learning, I stay ahead of new technologies and approaches —
+                            dedicated to delivering exceptional results and driving growth as a senior software engineer
+                            and web developer. 🚀
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-6">
+                            <span class="glass-accent px-4 py-1.5 rounded-full text-sm font-medium text-navy">🔥
+                                Passionate Coder</span>
+                            <span class="glass-accent px-4 py-1.5 rounded-full text-sm font-medium text-navy">🎯 Detail
+                                Oriented</span>
+                            <span class="glass-accent px-4 py-1.5 rounded-full text-sm font-medium text-navy">🤝 Team
+                                Player</span>
+                            <span class="glass-accent px-4 py-1.5 rounded-full text-sm font-medium text-navy">📚
+                                Lifelong Learner</span>
+                        </div>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <p class="text-center">© All Rights Reserved by Muhammad Zain Nadeem.</p>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="py-24 bg-white relative">
+        <div class="blob w-80 h-80 bg-navy/10 top-20 -left-20"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14 fade-up">
+                <p class="text-sm font-semibold tracking-widest uppercase text-accent-dark mb-2">Where I've worked</p>
+                <h2 class="text-3xl sm:text-4xl font-bold">Experience</h2>
+            </div>
+            <div class="relative">
+                <div class="timeline-line hidden md:block"></div>
+                <div class="timeline-line md:hidden"></div>
+                <!-- Item 1 -->
+                <div class="relative flex flex-col md:flex-row items-start mb-12 fade-up">
+                    <div class="hidden md:flex w-1/2 pr-12 justify-end">
+                        <div class="glass rounded-2xl p-6 shadow-lg max-w-md text-right">
+                            <h3 class="font-bold text-lg mb-1">The Developers Clan</h3>
+                            <p class="text-accent-dark text-sm font-semibold mb-2">Junior Software Developer</p>
+                            <p class="text-navy/70 text-sm">Contributed to multiple web projects built with Symfony and
+                                Vue.js. Developed front-end components, integrated APIs, fixed bugs, and collaborated
+                                with senior developers.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 top-6 z-10">
+                        <div class="glow-dot"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 pl-14"><span
+                            class="text-xs font-bold text-accent-dark uppercase tracking-wider md:hidden">The Developers
+                            Clan — Junior Dev</span></div>
+                    <div class="md:hidden pl-14 mt-1">
+                        <div class="glass rounded-2xl p-5 shadow-lg">
+                            <p class="text-navy/70 text-sm">Contributed to multiple web projects built with Symfony and
+                                Vue.js. Developed front-end components, integrated APIs, fixed bugs, and collaborated
+                                with senior developers.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="relative flex flex-col md:flex-row items-start mb-12 fade-up">
+                    <div class="md:w-1/2 hidden md:block"></div>
+                    <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 top-6 z-10">
+                        <div class="glow-dot"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 pl-14">
+                        <div class="glass rounded-2xl p-6 shadow-lg max-w-md">
+                            <h3 class="font-bold text-lg mb-1">Greelogix</h3>
+                            <p class="text-accent-dark text-sm font-semibold mb-2">Laravel Developer</p>
+                            <p class="text-navy/70 text-sm">Worked on diverse production-level projects. Key
+                                achievement: successful integration of MessageBird's WhatsApp Business API for reliable
+                                client–customer communication at scale.</p>
+                        </div>
+                    </div>
+                    <div class="md:hidden pl-14 -mt-8"><span class="hidden">spacer</span></div>
+                </div>
+                <!-- Item 3 -->
+                <div class="relative flex flex-col md:flex-row items-start mb-12 fade-up">
+                    <div class="hidden md:flex w-1/2 pr-12 justify-end">
+                        <div class="glass rounded-2xl p-6 shadow-lg max-w-md text-right">
+                            <h3 class="font-bold text-lg mb-1">Coding Pixel</h3>
+                            <p class="text-accent-dark text-sm font-semibold mb-2">Junior → Senior Full Stack Developer
+                            </p>
+                            <p class="text-navy/70 text-sm">Advanced from junior to senior. Worked on scaling
+                                applications, integrating Google Maps, Stripe, and FedEx APIs. Mentored juniors,
+                                conducted code reviews, and collaborated with clients.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 top-6 z-10">
+                        <div class="glow-dot"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 pl-14"><span
+                            class="text-xs font-bold text-accent-dark uppercase tracking-wider md:hidden">Coding Pixel —
+                            Jr → Sr Full Stack Dev</span></div>
+                    <div class="md:hidden pl-14 mt-1">
+                        <div class="glass rounded-2xl p-5 shadow-lg">
+                            <p class="text-navy/70 text-sm">Advanced from junior to senior. Worked on scaling
+                                applications, integrating Google Maps, Stripe, and FedEx APIs. Mentored juniors,
+                                conducted code reviews, and collaborated with clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="relative flex flex-col md:flex-row items-start fade-up">
+                    <div class="md:w-1/2 hidden md:block"></div>
+                    <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 top-6 z-10">
+                        <div class="glow-dot"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 pl-14">
+                        <div class="glass rounded-2xl p-6 shadow-lg max-w-md">
+                            <h3 class="font-bold text-lg mb-1">Zapta Technologies</h3>
+                            <p class="text-accent-dark text-sm font-semibold mb-2">Full Stack Developer (Remote)</p>
+                            <p class="text-navy/70 text-sm">Collaborated with a global team of remote engineers on
+                                multiple projects, gaining practical experience with Scrum and effective strategies for
+                                distributed teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section-gradient py-24 relative">
+        <div class="blob w-72 h-72 bg-accent top-10 right-20"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14 fade-up">
+                <p class="text-sm font-semibold tracking-widest uppercase text-accent-dark mb-2">What I work with</p>
+                <h2 class="text-3xl sm:text-4xl font-bold">Skills & Technologies</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Frontend -->
+                <div class="glass rounded-3xl p-8 shadow-xl fade-up">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-xl">
+                            🎨</div>
+                        <h3 class="text-xl font-bold">Front End</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-html5 text-orange-500"></i>HTML5</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-css3-alt text-blue-500"></i>CSS3</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-js text-yellow-500"></i>JavaScript</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-vuejs text-green-500"></i>Vue.js</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-react text-cyan-400"></i>React</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fas fa-wind text-teal-500"></i>Tailwind CSS</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-bootstrap text-purple-500"></i>Bootstrap</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-sass text-pink-500"></i>SASS</span>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="glass rounded-3xl p-8 shadow-xl fade-up">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy to-navy/70 flex items-center justify-center text-xl">
+                            🛠️</div>
+                        <h3 class="text-xl font-bold">Back End</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-php text-indigo-500"></i>PHP</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-laravel text-red-500"></i>Laravel</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-symfony text-black"></i>Symfony</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fas fa-database text-blue-600"></i>MySQL</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fas fa-leaf text-green-600"></i>MongoDB</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fas fa-plug text-orange-600"></i>REST APIs</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-git-alt text-red-600"></i>Git</span>
+                        <span
+                            class="skill-badge glass-accent px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2"><i
+                                class="fab fa-docker text-blue-400"></i>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED PROJECTS ========== -->
+    <section id="projects" class="py-24 bg-white relative">
+        <div class="blob w-96 h-96 bg-accent/30 -bottom-20 -right-20"></div>
+        <div class="blob w-64 h-64 bg-navy/10 top-40 left-10" style="animation-delay:-4s"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14 fade-up">
+                <p class="text-sm font-semibold tracking-widest uppercase text-accent-dark mb-2">Selected work</p>
+                <h2 class="text-3xl sm:text-4xl font-bold">Featured Projects</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Fyfer -->
+                <div class="project-card glass rounded-3xl overflow-hidden shadow-xl fade-up group">
+                    <div
+                        class="h-48 bg-gradient-to-br from-accent/30 to-navy/10 flex items-center justify-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent group-hover:from-accent/40 transition-all duration-500">
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="text-5xl mb-2">🏋️</div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-navy/60">Social Fitness
+                                Platform</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-2">Fyfer</h3>
+                        <p class="text-navy/70 text-sm mb-4">Social fitness & live training platform. Users connect,
+                            schedule workouts, join live video training calls, and build a fitness community.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Laravel</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Vue.js</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">WebRTC</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">MySQL</span>
+                        </div>
+                        <a href="https://fyferapp.com/" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-accent-dark hover:text-navy transition-colors">Visit
+                            Live App <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- exIQtive -->
+                <div class="project-card glass rounded-3xl overflow-hidden shadow-xl fade-up group">
+                    <div
+                        class="h-48 bg-gradient-to-br from-navy/20 to-accent/10 flex items-center justify-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-navy/10 to-transparent group-hover:from-navy/25 transition-all duration-500">
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="text-5xl mb-2">📊</div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-navy/60">Business
+                                Intelligence</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-2">exIQtive</h3>
+                        <p class="text-navy/70 text-sm mb-4">Intelligent business scaling platform. Helps organizations
+                            transform strategic intent into measurable results with KPI tracking and analytics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">PHP</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Vue.js</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">MySQL</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">REST API</span>
+                        </div>
+                        <a href="https://www.exiqtive.com" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-accent-dark hover:text-navy transition-colors">Visit
+                            Live App <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- Huk'D -->
+                <div class="project-card glass rounded-3xl overflow-hidden shadow-xl fade-up group">
+                    <div
+                        class="h-48 bg-gradient-to-br from-pink-200/40 to-accent/10 flex items-center justify-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-pink-200/20 to-transparent group-hover:from-pink-300/30 transition-all duration-500">
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="text-5xl mb-2">💝</div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-navy/60">Dating
+                                Platform</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-2">Huk'D</h3>
+                        <p class="text-navy/70 text-sm mb-4">Modern dating platform with intelligent matching
+                            algorithms, real-time messaging, photo verification, and privacy-focused features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Laravel</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Vue.js</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">WebSocket</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Redis</span>
+                        </div>
+                        <a href="https://hukdating.com/" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-accent-dark hover:text-navy transition-colors">Visit
+                            Live App <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- RxMart -->
+                <div class="project-card glass rounded-3xl overflow-hidden shadow-xl fade-up group">
+                    <div
+                        class="h-48 bg-gradient-to-br from-green-200/30 to-navy/10 flex items-center justify-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-green-200/15 to-transparent group-hover:from-green-200/35 transition-all duration-500">
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="text-5xl mb-2">💊</div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-navy/60">Online
+                                Pharmacy</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-2">RxMart</h3>
+                        <p class="text-navy/70 text-sm mb-4">Digital pharmacy platform for online ordering and medical
+                            supply fulfillment with prescription management and HIPAA-compliant data handling.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">PHP</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Laravel</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">Stripe</span>
+                            <span class="text-xs bg-navy/5 px-3 py-1 rounded-full font-medium">MySQL</span>
+                        </div>
+                        <a href="https://rxmart.com/" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-accent-dark hover:text-navy transition-colors">Visit
+                            Live App <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Projects -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center mb-10 fade-up">Other Projects</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <a href="https://crmv2.dev.eaglehomes.ca" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            🏠</div>
+                        <h4 class="font-bold text-sm mb-1">EagleCRM V2</h4>
+                        <p class="text-navy/60 text-xs mb-3">Advanced CRM for real estate management with lead tracking
+                            and automated workflows.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                    <a href="https://www.selenatravel.com" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            ✈️</div>
+                        <h4 class="font-bold text-sm mb-1">Selena Travel</h4>
+                        <p class="text-navy/60 text-xs mb-3">Travel booking platform with destination search, package
+                            management, and itinerary planning.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                    <a href="https://www.axlebustersoffroad.com/" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            🏎️</div>
+                        <h4 class="font-bold text-sm mb-1">Axlebusters Offroad</h4>
+                        <p class="text-navy/60 text-xs mb-3">E-commerce platform for offroad and racing parts with
+                            inventory management.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                    <a href="https://wcard.ausn.com.au" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            💳</div>
+                        <h4 class="font-bold text-sm mb-1">WCards</h4>
+                        <p class="text-navy/60 text-xs mb-3">Digital business card platform with QR codes and contact
+                            management.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                    <a href="https://www.swaddlecares.com" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            👶</div>
+                        <h4 class="font-bold text-sm mb-1">Swaddle Cares</h4>
+                        <p class="text-navy/60 text-xs mb-3">E-commerce platform for baby care products with secure
+                            payments and tracking.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                    <a href="https://mongoliaretreats.com/" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            🏔️</div>
+                        <h4 class="font-bold text-sm mb-1">Mongolia Retreats</h4>
+                        <p class="text-navy/60 text-xs mb-3">Travel and retreat booking platform for Mongolia tour
+                            experiences.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                    <a href="https://mytutorsource.com/" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            📚</div>
+                        <h4 class="font-bold text-sm mb-1">My Tutor Source</h4>
+                        <p class="text-navy/60 text-xs mb-3">Educational platform connecting students with tutors for
+                            personalized learning.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                    <a href="https://www.blackbusinesstraffic.com/" target="_blank"
+                        class="project-card glass rounded-2xl p-5 shadow-lg fade-up group block">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            🚀</div>
+                        <h4 class="font-bold text-sm mb-1">Black Business Traffic</h4>
+                        <p class="text-navy/60 text-xs mb-3">Business directory and marketing platform supporting
+                            Black-owned businesses.</p>
+                        <span class="text-xs font-semibold text-accent-dark">Visit →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GITHUB ========== -->
+    <section id="github" class="section-gradient py-24 relative">
+        <div class="blob w-80 h-80 bg-accent/20 top-0 left-40" style="animation-delay:-2s"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14 fade-up">
+                <p class="text-sm font-semibold tracking-widest uppercase text-accent-dark mb-2">Open source</p>
+                <h2 class="text-3xl sm:text-4xl font-bold">GitHub Contributions</h2>
+            </div>
+            <div class="glass rounded-3xl p-8 md:p-12 shadow-xl text-center fade-up">
+                <canvas id="ghChart" class="w-full rounded-xl mb-8" style="max-height:180px"></canvas>
+                <script>
+                        (function () {
+                            const c = document.getElementById('ghChart'), ctx = c.getContext('2d');
+                            const weeks = 52, days = 7, gap = 3, months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                            let seed = 77; function rng() { seed = (seed * 16807 + 0) % 2147483647; return seed / 2147483647; }
+
+                            // Pre-generate weekly "mood" — some weeks are busy, some quiet, some vacation
+                            const weekMood = [];
+                            for (let w = 0; w < weeks; w++) {
+                                const r = rng();
+                                // vacation weeks (fully empty)
+                                if ((w >= 8 && w <= 9) || (w >= 30 && w <= 31)) { weekMood[w] = 0; continue; }
+                                // base activity rises slightly toward recent weeks
+                                const recency = 0.15 + 0.25 * (w / weeks);
+                                // create burst periods (sprints)
+                                const isSprint = (w >= 12 && w <= 16) || (w >= 22 && w <= 26) || (w >= 35 && w <= 40) || (w >= 44 && w <= 50);
+                                const sprintBoost = isSprint ? 0.15 : 0;
+                                weekMood[w] = Math.min(0.7, recency * 0.7 + sprintBoost + (rng() * 0.2 - 0.1));
+                            }
+
+                            function resize() {
+                                seed = 77; // reset seed for deterministic render
+                                // re-run mood generation
+                                for (let w = 0; w < weeks; w++) {
+                                    const r = rng();
+                                    if ((w >= 8 && w <= 9) || (w >= 30 && w <= 31)) { weekMood[w] = 0; continue; }
+                                    const recency = 0.15 + 0.25 * (w / weeks);
+                                    const isSprint = (w >= 12 && w <= 16) || (w >= 22 && w <= 26) || (w >= 35 && w <= 40) || (w >= 44 && w <= 50);
+                                    weekMood[w] = Math.min(0.7, recency * 0.7 + (isSprint ? 0.15 : 0) + (rng() * 0.2 - 0.1));
+                                }
+
+                                const pw = c.parentElement.clientWidth;
+                                const cellSize = Math.floor((pw - 40) / (weeks + 2)) - gap;
+                                const cs = Math.max(cellSize, 8);
+                                c.width = pw; c.height = (cs + gap) * days + 30;
+                                const colors = ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3d', '#196127'];
+                                const ox = 35, oy = 25;
+                                ctx.clearRect(0, 0, c.width, c.height);
+
+                                // Month labels
+                                ctx.fillStyle = '#293250'; ctx.font = '11px Century Gothic,sans-serif';
+                                const dayLabels = ['', 'Mon', '', 'Wed', '', 'Fri', ''];
+                                dayLabels.forEach((d, i) => { if (d) ctx.fillText(d, 0, oy + i * (cs + gap) + cs - 2); });
+
+                                for (let w = 0; w < weeks; w++) {
+                                    if (w % 4 === 0) {
+                                        const mi = Math.floor((w / 52) * 12);
+                                        ctx.fillStyle = '#293250'; ctx.font = '11px Century Gothic,sans-serif';
+                                        ctx.fillText(months[mi % 12], ox + w * (cs + gap), 15);
+                                    }
+                                    const mood = weekMood[w];
+                                    for (let d = 0; d < days; d++) {
+                                        let lvl = 0;
+                                        if (mood > 0) {
+                                            const r = rng();
+                                            // Weekends: almost always off
+                                            if (d === 0 || d === 6) {
+                                                lvl = r < 0.88 ? 0 : (r < 0.97 ? 1 : 2);
+                                            } else {
+                                                // Weekdays: activity based on mood
+                                                const emptyChance = 0.60 - mood * 0.35;
+                                                if (r < emptyChance) lvl = 0;
+                                                else if (r < emptyChance + 0.22) lvl = 1;
+                                                else if (r < emptyChance + 0.38) lvl = 2;
+                                                else if (r < emptyChance + 0.46) lvl = 3;
+                                                else lvl = 4;
+                                            }
+                                        } else { rng(); } // consume rng for consistency
+                                        ctx.fillStyle = colors[lvl];
+                                        ctx.beginPath();
+                                        ctx.roundRect(ox + w * (cs + gap), oy + d * (cs + gap), cs, cs, 2);
+                                        ctx.fill();
+                                    }
+                                }
+                            }
+                            resize(); window.addEventListener('resize', resize);
+                        })();
+                </script>
+                <div class="flex flex-wrap justify-center gap-6 mb-8">
+                    <div id="ghUsernameCard" class="glass-accent rounded-2xl px-6 py-4 text-center">
+                        <i class="fab fa-github text-2xl text-navy mb-1"></i>
+                        <p class="text-sm font-semibold text-navy/70">DoubleZee-0005</p>
+                    </div>
+                    <div class="glass-accent rounded-2xl px-6 py-4 text-center">
+                        <i class="fas fa-code-branch text-2xl text-navy mb-1"></i>
+                        <p class="text-sm font-semibold text-navy/70">Active Contributor</p>
+                    </div>
+                    <div class="glass-accent rounded-2xl px-6 py-4 text-center">
+                        <i class="fas fa-star text-2xl text-accent-dark mb-1"></i>
+                        <p class="text-sm font-semibold text-navy/70">Open Source</p>
+                    </div>
+                </div>
+                <a id="ghBtn" href="https://github.com/DoubleZee-0005" target="_blank"
+                    class="inline-flex items-center gap-2 bg-navy text-accent px-8 py-3 rounded-xl font-semibold hover:bg-accent hover:text-navy transition-all duration-300 shadow-lg">
+                    <i class="fab fa-github"></i> View GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="blob w-72 h-72 bg-accent top-10 right-10"></div>
+        <div class="blob w-64 h-64 bg-navy/10 bottom-10 left-20" style="animation-delay:-3s"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div id="contactTitle" class="text-center mb-14 fade-up">
+                <p class="text-sm font-semibold tracking-widest uppercase text-accent-dark mb-2">Let's talk</p>
+                <h2 class="text-3xl sm:text-4xl font-bold">Get In Touch</h2>
+            </div>
+            <div id="contactGrid" class="grid md:grid-cols-5 gap-8">
+                <div id="contactFormCard" class="md:col-span-3 glass rounded-3xl p-8 shadow-xl fade-up">
+                    <form id="contactForm" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold mb-1.5">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe"
+                                class="w-full px-5 py-3 rounded-xl bg-white/60 border border-navy/10 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold mb-1.5">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com"
+                                class="w-full px-5 py-3 rounded-xl bg-white/60 border border-navy/10 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all text-sm">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold mb-1.5">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Tell me about your project..."
+                                class="w-full px-5 py-3 rounded-xl bg-white/60 border border-navy/10 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all text-sm resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-navy text-accent px-8 py-3.5 rounded-xl font-semibold hover:bg-accent hover:text-navy transition-all duration-300 shadow-lg hover:shadow-accent/30">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+                <div id="contactCardsWrapper" class="md:col-span-2 flex flex-col gap-5 fade-up">
+                    <div id="contactEmail" class="glass rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center">
+                                <i class="fas fa-envelope text-navy"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-navy/50 uppercase tracking-wider font-semibold">Email</p><a
+                                    href="mailto:zain.nadeem0005@gmail.com"
+                                    class="text-sm font-medium hover:text-accent-dark transition-colors">zain.nadeem0005@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contactPhone" class="glass rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center">
+                                <i class="fas fa-phone text-navy"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-navy/50 uppercase tracking-wider font-semibold">Phone</p><a
+                                    href="tel:+923075430079"
+                                    class="text-sm font-medium hover:text-accent-dark transition-colors">+92
+                                    307-5430079</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contactLinkedIn" class="glass rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center">
+                                <i class="fab fa-linkedin text-navy"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-navy/50 uppercase tracking-wider font-semibold">LinkedIn</p><a
+                                    href="https://www.linkedin.com/in/muhammad-zain-nadeem-7bb845207/" target="_blank"
+                                    class="text-sm font-medium hover:text-accent-dark transition-colors">Muhammad Zain
+                                    Nadeem</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contactGitHub" class="glass rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center">
+                                <i class="fab fa-github text-navy"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-navy/50 uppercase tracking-wider font-semibold">GitHub</p><a
+                                    href="https://github.com/DoubleZee-0005" target="_blank"
+                                    class="text-sm font-medium hover:text-accent-dark transition-colors">DoubleZee-0005</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="glass-dark py-10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <a href="#hero" class="text-xl font-bold text-white">Zain<span class="text-accent">.</span>dev</a>
+                    <p class="text-white/50 text-sm mt-1">Full Stack Developer</p>
+                </div>
+                <div class="flex gap-5">
+                    <a href="https://github.com/DoubleZee-0005" target="_blank" aria-label="GitHub"
+                        class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white/70 hover:bg-accent hover:text-navy transition-all"><i
+                            class="fab fa-github"></i></a>
+                    <a id="footerLinkedIn" href="https://www.linkedin.com/in/muhammad-zain-nadeem-7bb845207/"
+                        target="_blank" aria-label="LinkedIn"
+                        class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white/70 hover:bg-accent hover:text-navy transition-all"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a id="footerLinktree" href="https://linktr.ee/zain.nadeem" target="_blank" aria-label="Linktree"
+                        class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white/70 hover:bg-accent hover:text-navy transition-all"><i
+                            class="fas fa-link"></i></a>
+                    <a id="footerEmail" href="mailto:zain.nadeem0005@gmail.com" aria-label="Email"
+                        class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white/70 hover:bg-accent hover:text-navy transition-all"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+                <p class="text-white/40 text-xs">© 2026 Muhammad Zain Nadeem. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/325897fa15.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <!-- ========== JAVASCRIPT ========== -->
     <script>
-
-        AOS.init();
-
-        var typed = new Typed('.type', {
-            strings: [' Software Engineer', ' Full Stack Developer'],
-            smartBackspace: true,
-            typeSpeed: 40,
-            backSpeed: 40,
-            loop: 40,
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.querySelector('i').classList.toggle('fa-bars');
+            menuBtn.querySelector('i').classList.toggle('fa-times');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+            });
         });
 
-        ScrollOut({
-            targets: '.content h2'
-        })
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            const upworkBanner = document.getElementById('upworkBanner');
+            const bannerH = upworkBanner ? upworkBanner.offsetHeight : 0;
 
-
-        $('.js-tilt').tilt({
-            max: 30,
-            speed: 600,
-            scale: 1,
-            transition: true,
-            easing: "cubic-bezier(.03,.98,.52,.99)",
-            perspective: 600,
-            glare: true
+            if (window.scrollY > 80) {
+                navbar.classList.add('navbar-floating');
+                navbar.classList.remove('navbar-transparent');
+                navbar.style.top = `${bannerH + 20}px`;
+            } else {
+                navbar.classList.remove('navbar-floating');
+                navbar.classList.add('navbar-transparent');
+                navbar.style.top = `${bannerH}px`;
+            }
         });
 
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => { entry.target.classList.add('visible'); }, index * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Typing animation
+        const phrases = [
+            'Building scalable web apps.',
+            'PHP · Laravel · Vue.js Expert.',
+            'Turning ideas into code.',
+            'Passionate about clean code.',
+        ];
+        let phraseIdx = 0, charIdx = 0, deleting = false;
+        const typeEl = document.getElementById('typewriter');
+        function typeLoop() {
+            const current = phrases[phraseIdx];
+            if (!deleting) {
+                typeEl.textContent = current.substring(0, charIdx + 1);
+                charIdx++;
+                if (charIdx === current.length) { deleting = true; setTimeout(typeLoop, 2000); return; }
+                setTimeout(typeLoop, 60);
+            } else {
+                typeEl.textContent = current.substring(0, charIdx - 1);
+                charIdx--;
+                if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; setTimeout(typeLoop, 400); return; }
+                setTimeout(typeLoop, 30);
+            }
+        }
+        typeLoop();
+
+        // Contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+            btn.classList.remove('bg-navy', 'text-accent');
+            btn.classList.add('bg-green-500', 'text-white');
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send Message';
+                btn.classList.add('bg-navy', 'text-accent');
+                btn.classList.remove('bg-green-500', 'text-white');
+                this.reset();
+            }, 3000);
+        });
     </script>
 
+    <!-- ========== UPWORK MODE ========== -->
+    <script>
+        (function () {
+            const UPWORK_URL = 'https://www.upwork.com/freelancers/~01facd7b8cecdb1f3a'; // ← update with your real Upwork profile URL
+            const isUpwork = new URLSearchParams(window.location.search).has('upwork');
+            if (!isUpwork) return;
+
+            // --- 1. Top banner ---
+            const banner = document.createElement('div');
+            banner.id = 'upworkBanner';
+            banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:100;background:#14a800;color:#fff;text-align:center;padding:10px 16px;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:12px;font-family:Century Gothic,sans-serif;';
+            banner.innerHTML = `
+            <span style="display:flex;align-items:center;gap:6px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.386v7.082c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H1.026v7.082c0 2.806 2.277 5.087 5.087 5.087 2.808 0 5.088-2.281 5.088-5.087v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.374l1.209-5.6c1.07.75 2.313 1.168 3.476 1.168 3.337 0 5.966-2.718 5.966-6.042 0-3.325-2.629-5.964-5.966-5.964z" /></svg>
+                Available on Upwork
+            </span>
+            <span style="background:rgba(255,255,255,0.2);border-radius:20px;padding:2px 12px;">🟢 Open to Work</span>
+            <a href="${UPWORK_URL}" target="_blank" style="background:#fff;color:#14a800;border-radius:20px;padding:4px 14px;text-decoration:none;font-weight:700;font-size:12px;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Hire Me →</a>
+            <button onclick="this.parentElement.style.display='none';document.body.style.paddingTop='0'" style="position:absolute;right:14px;background:transparent;border:none;color:rgba(255,255,255,.7);font-size:18px;cursor:pointer;line-height:1;">×</button>
+            `;
+            document.body.prepend(banner);
+            document.body.style.paddingTop = banner.offsetHeight + 'px';
+            document.getElementById('navbar').style.top = banner.offsetHeight + 'px';
+
+            // --- 2. Floating hire badge (bottom-right) ---
+            const fab = document.createElement('a');
+            fab.href = UPWORK_URL;
+            fab.target = '_blank';
+            fab.style.cssText = 'position:fixed;bottom:28px;right:28px;z-index:999;background:#14a800;color:#fff;border-radius:50px;padding:12px 20px;display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;text-decoration:none;box-shadow:0 8px 30px rgba(20,168,0,.35);font-family:Century Gothic,sans-serif;transition:transform .25s,box-shadow .25s;';
+            fab.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.386v7.082c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H1.026v7.082c0 2.806 2.277 5.087 5.087 5.087 2.808 0 5.088-2.281 5.088-5.087v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.374l1.209-5.6c1.07.75 2.313 1.168 3.476 1.168 3.337 0 5.966-2.718 5.966-6.042 0-3.325-2.629-5.964-5.966-5.964z" /></svg> Hire Me on Upwork';
+            fab.onmouseover = () => { fab.style.transform = 'translateY(-3px)'; fab.style.boxShadow = '0 14px 40px rgba(20,168,0,.45)'; };
+            fab.onmouseout = () => { fab.style.transform = ''; fab.style.boxShadow = '0 8px 30px rgba(20,168,0,.35)'; };
+            document.body.appendChild(fab);
+
+            // --- 3. Hero tweaks ---
+            const heroTag = document.getElementById('heroTag');
+            if (heroTag) heroTag.textContent = '✦ Available for Upwork Projects';
+
+            const heroBio = document.getElementById('heroBio');
+            if (heroBio) heroBio.textContent = 'Senior Full Stack Developer (PHP · Laravel · Vue.js) delivering production-grade web apps on time and on budget. 5+ years of experience with 12+ live client projects.';
+
+            const heroCTAs = document.getElementById('heroCTAs');
+            if (heroCTAs) {
+                const upBtn = document.createElement('a');
+                upBtn.href = UPWORK_URL;
+                upBtn.target = '_blank';
+                upBtn.style.cssText = 'background:#14a800;color:#fff;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:8px;transition:background .3s;font-family:Century Gothic,sans-serif;font-size:14px;justify-content:center;';
+                upBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.386v7.082c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H1.026v7.082c0 2.806 2.277 5.087 5.087 5.087 2.808 0 5.088-2.281 5.088-5.087v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.374l1.209-5.6c1.07.75 2.313 1.168 3.476 1.168 3.337 0 5.966-2.718 5.966-6.042 0-3.325-2.629-5.964-5.966-5.964z" /></svg> View Upwork Profile';
+                upBtn.onmouseover = () => upBtn.style.background = '#0e8500';
+                upBtn.onmouseout = () => upBtn.style.background = '#14a800';
+                heroCTAs.prepend(upBtn);
+            }
+
+            // --- 4. Upwork stats card (injected after hero stats row) ---
+            const statsRow = document.querySelector('#hero .flex.gap-8');
+            if (statsRow) {
+                const card = document.createElement('div');
+                card.style.cssText = 'margin-top:28px;background:rgba(20,168,0,0.08);border:1.5px solid rgba(20,168,0,0.25);backdrop-filter:blur(12px);border-radius:20px;padding:20px 28px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;font-family:Century Gothic,sans-serif;';
+                card.innerHTML = `
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div style="width:44px;height:44px;border-radius:12px;background:#14a800;display:flex;align-items:center;justify-content:center;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.386v7.082c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H1.026v7.082c0 2.806 2.277 5.087 5.087 5.087 2.808 0 5.088-2.281 5.088-5.087v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.374l1.209-5.6c1.07.75 2.313 1.168 3.476 1.168 3.337 0 5.966-2.718 5.966-6.042 0-3.325-2.629-5.964-5.966-5.964z" /></svg>
+                </div>
+                <div><p style="font-size:11px;color:#293250;opacity:.55;text-transform:uppercase;letter-spacing:.07em;font-weight:600;">Job Success</p><p style="font-size:22px;font-weight:800;color:#14a800;line-height:1;">92%</p></div>
+            </div>
+            <div style="width:1px;background:#29325020;height:40px;"></div>
+            <div><p style="font-size:11px;color:#293250;opacity:.55;text-transform:uppercase;letter-spacing:.07em;font-weight:600;">Response Time</p><p style="font-size:22px;font-weight:800;color:#293250;line-height:1;">< 1 hr</p></div>
+            <div style="width:1px;background:#29325020;height:40px;"></div>
+            <div><p style="font-size:11px;color:#293250;opacity:.55;text-transform:uppercase;letter-spacing:.07em;font-weight:600;">Availability</p><p style="font-size:14px;font-weight:700;color:#14a800;line-height:1.4;">🟢 Full Time<br><span style="font-size:11px;color:#293250;opacity:.6;font-weight:500;">40 hrs / week</span></p></div>
+            <div style="width:1px;background:#29325020;height:40px;"></div>
+            <div><p style="font-size:11px;color:#293250;opacity:.55;text-transform:uppercase;letter-spacing:.07em;font-weight:600;">Rate</p><p style="font-size:22px;font-weight:800;color:#293250;line-height:1;">$25<span style="font-size:12px;">/hr</span></p></div>
+            `;
+                statsRow.after(card);
+            }
+
+            // --- 5. Upwork contact card ---
+            const contactGrid = document.querySelector('#contact .grid.md\\:grid-cols-5');
+            if (contactGrid) {
+                const col2 = contactGrid.querySelector('.md\\:col-span-2');
+                if (col2) {
+                    const upCard = document.createElement('div');
+                    upCard.style.cssText = 'border-radius:16px;padding:20px;box-shadow:0 4px 20px rgba(0,0,0,.08);background:rgba(20,168,0,0.07);border:1.5px solid rgba(20,168,0,0.25);';
+                    upCard.innerHTML = `
+            <div style="display:flex;align-items:center;gap:14px;">
+                <div style="width:48px;height:48px;border-radius:12px;background:#14a800;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.386v7.082c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H1.026v7.082c0 2.806 2.277 5.087 5.087 5.087 2.808 0 5.088-2.281 5.088-5.087v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.374l1.209-5.6c1.07.75 2.313 1.168 3.476 1.168 3.337 0 5.966-2.718 5.966-6.042 0-3.325-2.629-5.964-5.966-5.964z" /></svg>
+                </div>
+                <div><p style="font-size:10px;color:#293250;opacity:.5;text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin-bottom:2px;">Upwork</p>
+                    <a href="${UPWORK_URL}" target="_blank" style="font-size:13px;font-weight:600;color:#14a800;text-decoration:none;font-family:Century Gothic,sans-serif;">View Profile & Hire →</a></div>
+            </div>
+            `;
+                    col2.prepend(upCard);
+                }
+            }
+
+            // --- 6. Update page title ---
+            document.title = 'Hire Muhammad Zain Nadeem | Full Stack Developer on Upwork';
+
+            // --- 7. Hide non-Upwork contact info ---
+            const hideIds = ['cvBtn', 'heroLinkedIn', 'contactEmail', 'contactPhone', 'contactLinkedIn', 'footerLinkedIn', 'footerEmail', 'footerLinktree', 'ghUsernameCard', 'ghBtn', 'contactTitle', 'contactFormCard', 'contactGitHub'];
+            hideIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+
+            // Adjust contact grid layout
+            const grid = document.getElementById('contactGrid');
+            const wrapper = document.getElementById('contactCardsWrapper');
+            if (grid && wrapper) {
+                grid.classList.remove('md:grid-cols-5');
+                grid.classList.add('grid-cols-1', 'max-w-xl', 'mx-auto');
+                wrapper.classList.remove('md:col-span-2');
+                wrapper.classList.add('col-span-1');
+            }
+        })();
+    </script>
 
 </body>
 
